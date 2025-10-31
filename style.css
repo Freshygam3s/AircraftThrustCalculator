@@ -1,35 +1,66 @@
-@import url(https://fonts.googleapis.com/css?family=Momo+Trust+Display:regular);
+@import url('https://fonts.googleapis.com/css?family=Momo+Trust+Display:regular');
 
 body {
-    background-image: linear-gradient(45deg, black, darkblue);
+    background: linear-gradient(135deg, black, darkblue);
+    margin: 0;
+    font-family: "Momo Trust Display", sans-serif;
+    width: 100vw;
+    height: 100vh;
 }
+
 .top {
     display: flex;
     justify-content: center;
-    font-family: "Momo Trust Display";
     color: aliceblue;
+    margin-top: 40px;
 }
+
 .calculator {
-    display: block;
     color: aliceblue;
-    font-family: "Momo Trust Display";
+    font-family: "Momo Trust Display", sans-serif;
+    max-width: 400px;
+    text-align: center;
 }
-label, input, button {
-  display: block;
-  width: 100%;
-  margin-top: 10px;
+
+label {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin: 8px auto;
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
 }
 
 button {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #0078D4;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    display: block;
+    margin: 25px auto;
+    width: 60%;
+    padding: 10px;
+    background-color: #0078D4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
-  background-color: #005fa3;
+    background-color: #005fa3;
+}
+
+h2 {
+    margin-top: 25px;
+    color: #9bd3ff;
+}
+
+#calcBtn {
+  font-family: "Momo Trust Display";
 }
