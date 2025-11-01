@@ -4,34 +4,42 @@ body {
     background: linear-gradient(135deg, black, darkblue);
     margin: 0;
     font-family: "Momo Trust Display", sans-serif;
-    width: 100vw;
-    height: 100vh;
+    color: aliceblue;
 }
 
 .top {
     display: flex;
     justify-content: center;
-    color: aliceblue;
+    margin-top: 40px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 80px;
+    flex-wrap: wrap;
     margin-top: 40px;
 }
 
 .calculator {
-    color: aliceblue;
-    font-family: "Momo Trust Display", sans-serif;
     max-width: 400px;
     text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 label {
     display: block;
     margin-top: 15px;
-    text-align: center;
 }
 
 input {
     display: block;
     margin: 8px auto;
-    width: 60%;
+    width: 70%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -42,7 +50,7 @@ input {
 button {
     display: block;
     margin: 25px auto;
-    width: 60%;
+    width: 70%;
     padding: 10px;
     background-color: #0078D4;
     color: white;
@@ -50,6 +58,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -61,6 +70,53 @@ h2 {
     color: #9bd3ff;
 }
 
-#calcBtn {
-  font-family: "Momo Trust Display";
+.rocket-container {
+    position: relative;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 120px;
+}
+
+.rocket {
+    position: relative;
+    width: 100px;
+    height: 300px;
+}
+
+.body {
+    width: 80px;
+    height: 220px;
+    background: linear-gradient(180deg, #bbb, #777);
+    margin: 0 auto;
+    border-radius: 20px 20px 10px 10px;
+    box-shadow: 0 0 25px white;
+}
+
+.flame {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1);
+    width: 40px;
+    height: 60px;
+    background: radial-gradient(ellipse at center, orange 0%, red 70%);
+    border-radius: 50%;
+    filter: blur(3px);
+    transition: all 0.3s ease;
+    transform-origin: top center;
+    box-shadow: 0 0 20px orange;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+canvas {
+    max-width: 800px;
+    width: 90%;
 }
