@@ -16,16 +16,25 @@
     <div class="main-container">
         <div class="calculator">
             <label for="density">Gaisa blīvums (kg/m³):</label>
-            <input type="number" id="density" step="0.01" value="1.225">
+            <input type="number" id="density" step="0.01" placeholder="e.g 1.225">
 
             <label for="area">Dzinēja ieplūdes zona (m²):</label>
-            <input type="number" id="area" step="0.01" value="1.5">
+            <input type="number" id="area" step="0.01" placeholder="e.g 1.5">
 
             <label for="velocity">Lidmašīnas ātrums (m/s):</label>
-            <input type="number" id="velocity" step="1" value="200">
+            <input type="number" id="velocity" step="1" placeholder="e.g 200">
 
             <label for="exhaust">Izplūdes ātrums (m/s):</label>
-            <input type="number" id="exhaust" step="1" value="600">
+            <input type="number" id="exhaust" step="1" placeholder="e.g 600">
+
+            <label for="mass">Lidmašīnas masa (kg):</label>
+            <input type="number" id="mass" step="1" placeholder="e.g 50000">
+
+            <label for="time">Simulācijas laiks (s):</label>
+            <input type="number" id="time" step="1" placeholder="e.g 60">
+
+            <label for="gravity">Gravitācija (m/s^2):</label>
+            <input type="number" id="gravity" step="0.01" value="9.81">
 
             <button id="calcBtn">Aprēķināt vilces spēku</button>
 
