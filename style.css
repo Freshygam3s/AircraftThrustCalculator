@@ -120,3 +120,8 @@ canvas {
     max-width: 800px;
     width: 90%;
 }
+
+a {
+    text-decoration: none;
+    color:aquamarine;
+}
