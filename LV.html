@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aircraft Thrust Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="top">
+        <h1>Gaisa kuģa vilces kalkulators</h1>
+        <p><a href="index.html">LV</a></p>
+    </div>
+
+    <div class="main-container">
+        <div class="calculator">
+            <label for="density">Gaisa blīvums (kg/m³):</label>
+            <input type="number" id="density" step="0.01" value="1.225">
+
+            <label for="area">Dzinēja ieplūdes zona (m²):</label>
+            <input type="number" id="area" step="0.01" value="1.5">
+
+            <label for="velocity">Lidmašīnas ātrums (m/s):</label>
+            <input type="number" id="velocity" step="1" value="200">
+
+            <label for="exhaust">Izplūdes ātrums (m/s):</label>
+            <input type="number" id="exhaust" step="1" value="600">
+
+            <button id="calcBtn">Aprēķināt vilces spēku</button>
+
+            <h2>Vilces spēks: <span id="output">—</span> N</h2>
+        </div>
+
+        <div class="rocket-container">
+            <div class="rocket">
+                <div class="body"></div>
+                <div class="flame"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="thrustChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
