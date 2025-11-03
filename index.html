@@ -16,16 +16,25 @@
     <div class="main-container">
         <div class="calculator">
             <label for="density">Air Density (kg/m³):</label>
-            <input type="number" id="density" step="0.01" value="1.225">
+            <input type="number" id="density" step="0.01" placeholder="e.g 1.225">
 
             <label for="area">Engine Intake Area (m²):</label>
-            <input type="number" id="area" step="0.01" value="1.5">
+            <input type="number" id="area" step="0.01" placeholder="e.g 1.5">
 
             <label for="velocity">Aircraft Speed (m/s):</label>
-            <input type="number" id="velocity" step="1" value="200">
+            <input type="number" id="velocity" step="1" placeholder="e.g 200">
 
             <label for="exhaust">Exhaust Velocity (m/s):</label>
-            <input type="number" id="exhaust" step="1" value="600">
+            <input type="number" id="exhaust" step="1" placeholder="e.g 600">
+
+            <label for="mass">Aircraft Mass (kg):</label>
+            <input type="number" id="mass" step="1" placeholder="e.g 50000">
+
+            <label for="time">Simulation Time (s):</label>
+            <input type="number" id="time" step="1" placeholder="e.g 60">
+
+            <label for="gravity">Gravity (m/s^2):</label>
+            <input type="number" id="gravity" step="0.01" value="9.81">
 
             <button id="calcBtn">Calculate Thrust</button>
 
