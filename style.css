@@ -1,127 +1,107 @@
 @import url('https://fonts.googleapis.com/css?family=Momo+Trust+Display:regular');
 
 body {
-    background: linear-gradient(135deg, black, darkblue);
+    background: linear-gradient(135deg, black, #000033);
     margin: 0;
     font-family: "Momo Trust Display", sans-serif;
     color: aliceblue;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .top {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    padding: 30px;
 }
 
 .main-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 80px;
-    flex-wrap: wrap;
-    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 350px 1fr 450px; /* Separates the three sections */
+    gap: 20px;
+    padding: 0 40px;
+    align-items: center; /* Centers items vertically relative to each other */
 }
 
 .calculator {
-    max-width: 400px;
-    text-align: center;
     background: rgba(255, 255, 255, 0.05);
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
-label {
-    display: block;
-    margin-top: 15px;
-}
-
+label { display: block; margin-top: 10px; font-size: 14px; color: #9bd3ff; }
 input {
     display: block;
-    margin: 8px auto;
-    width: 70%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin: 5px auto;
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
     text-align: center;
-    font-size: 16px;
 }
 
 button {
     display: block;
-    margin: 25px auto;
-    width: 70%;
-    padding: 10px;
+    margin: 20px auto;
+    width: 90%;
+    padding: 12px;
     background-color: #0078D4;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #005fa3;
-}
-
-h2 {
-    margin-top: 25px;
-    color: #9bd3ff;
+    font-weight: bold;
 }
 
 .rocket-container {
+    justify-self: center;
     position: relative;
-    width: 200px;
-    height: 400px;
+    height: 600px;
     display: flex;
-    justify-content: center;
     align-items: flex-end;
-    padding-bottom: 120px;
+    padding-bottom: 200px; /* Lifts the rocket higher */
 }
 
-.rocket {
-    position: relative;
-    width: 100px;
-    height: 300px;
-}
+.rocket { position: relative; width: 80px; }
 
 .body {
-    width: 80px;
-    height: 220px;
-    background: linear-gradient(180deg, #bbb, #777);
+    width: 70px;
+    height: 200px;
+    background: linear-gradient(180deg, #ccc, #666);
     margin: 0 auto;
-    border-radius: 20px 20px 10px 10px;
-    box-shadow: 0 0 25px white;
+    border-radius: 40px 40px 10px 10px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
 }
 
 .flame {
     position: absolute;
-    top: 100%;
+    top: 95%;
     left: 50%;
-    transform: translateX(-50%) scaleY(1);
-    width: 40px;
-    height: 60px;
-    background: radial-gradient(ellipse at center, orange 0%, red 70%);
+    transform: translateX(-50%) scaleY(0);
+    width: 35px;
+    height: 80px;
+    background: radial-gradient(ellipse at center, #fff 0%, orange 50%, red 90%);
     border-radius: 50%;
-    filter: blur(3px);
-    transition: all 0.3s ease;
+    filter: blur(4px);
+    transition: transform 0.3s ease-out;
     transform-origin: top center;
-    box-shadow: 0 0 20px orange;
+    opacity: 0;
 }
 
 .chart-container {
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    flex-direction: column;
+    gap: 20px;
 }
 
 canvas {
-    max-width: 800px;
-    width: 90%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    padding: 15px;
+    width: 100% !important;
+    height: 250px !important;
 }
 
-a {
-    text-decoration: none;
-    color:aquamarine;
-}
+a { text-decoration: none; color: aquamarine; font-weight: bold; }
