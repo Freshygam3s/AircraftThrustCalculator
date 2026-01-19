@@ -105,3 +105,65 @@ canvas {
 }
 
 a { text-decoration: none; color: aquamarine; font-weight: bold; }
+
+@media (max-width: 1024px) {
+    .main-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 30px;
+    }
+
+    .rocket-container {
+        grid-column: 1 / -1;
+        height: 400px;
+        padding-bottom: 100px;
+    }
+
+    canvas {
+        height: 220px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .calculator {
+        width: 100%;
+    }
+
+    .rocket-container {
+        height: 300px;
+        padding-bottom: 80px;
+    }
+
+    .rocket {
+        transform: scale(0.7);
+    }
+
+    canvas {
+        height: 200px !important;
+    }
+
+    h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    input, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .rocket {
+        transform: scale(0.6);
+    }
+
+    canvas {
+        height: 180px !important;
+    }
+}
