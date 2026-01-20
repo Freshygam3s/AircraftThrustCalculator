@@ -62,6 +62,7 @@ button {
     display: flex;
     align-items: flex-end;
     padding-bottom: 200px; /* Lifts the rocket higher */
+    overflow: hidden; /* Fixed the flame overlapping the chart */
 }
 
 .rocket { position: relative; width: 80px; }
@@ -167,3 +168,4 @@ a { text-decoration: none; color: aquamarine; font-weight: bold; }
         height: 180px !important;
     }
 }
+
