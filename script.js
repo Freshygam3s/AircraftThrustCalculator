@@ -60,20 +60,20 @@ const heightChart = new Chart(heightCanvas, {
 let calcCount = 0;
 
 calcBtn.addEventListener("click", function () {
-    const rho = parseFloat(document.getElementById("density").value);
-    const area = parseFloat(document.getElementById("area").value);
-    const v0 = parseFloat(document.getElementById("velocity").value);
-    const ve = parseFloat(document.getElementById("exhaust").value);
-    const mass = parseFloat(document.getElementById("mass").value);
-    const simTime = parseFloat(document.getElementById("time").value);
-    const g = parseFloat(document.getElementById("gravity").value) || 9.81;
+    const rho = parseFloat(document.getElementById("density").value); /* Gaisa blīvums*/
+    const area = parseFloat(document.getElementById("area").value); /* Dzinēja izplūdes zona */
+    const v0 = parseFloat(document.getElementById("velocity").value); /* Ātrums */
+    const ve = parseFloat(document.getElementById("exhaust").value); /* Izplūdes gāžu ātrums */
+    const mass = parseFloat(document.getElementById("mass").value); /* Gaisa kuģa masa */
+    const simTime = parseFloat(document.getElementById("time").value); /* Simulācijas laiks */
+    const g = parseFloat(document.getElementById("gravity").value) || 9.81; /* Gravitāciajas spēks */
 
     if ([rho, area, v0, ve, mass, simTime].some(isNaN)) {
         output.textContent = "Error";
         return;
     }
 
-    const mDot = rho * area * v0;
+    const mDot = rho * area * v0; /* Masas plūsmas ātrums: m˙= ρ⋅A⋅v */
     const thrust = mDot * (ve - v0);
     output.textContent = Math.round(thrust).toLocaleString();
 
