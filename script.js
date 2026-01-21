@@ -68,10 +68,15 @@ calcBtn.addEventListener("click", function () {
     const simTime = parseFloat(document.getElementById("time").value); /* Simulācijas laiks */
     const g = parseFloat(document.getElementById("gravity").value) || 9.81; /* Gravitāciajas spēks */
 
-    if ([rho, area, v0, ve, mass, simTime].some(isNaN)) {
-        output.textContent = "Error";
+    const values = { rho, area, v0, ve, mass, simTime, g };
+
+    // Reject NaN, zero, or negative numbers
+    if (Object.values(values).some(v => isNaN(v) || v <= 0)) {
+        output.textContent = "Please enter positive numbers only";
+        flame.style.opacity = "0";
         return;
     }
+
 
     const mDot = rho * area * v0; /* Masas plūsmas ātrums: m˙= ρ⋅A⋅v */
     const thrust = mDot * (ve - v0);
